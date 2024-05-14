@@ -1,0 +1,1329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/*Paleta de colores*/
+:root {
+    --color1: #f06e9c;
+    --color2: #f6a2bf;
+    --color3: white;
+    --color4: black;
+    --color5: #ee8caf;
+    --color6: #f3387a;
+    --color7: #1A202C;
+    --color8: #7c7b7b;
+    --color9: rgb(165, 82, 120);
+}
+
+/*Estilos Generales*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    background-color: var(--color1);
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.nav-card {
+    display: none;
+}
+
+.container nav button {
+    display: none;
+}
+
+.nav-card li {
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.container nav i:hover > .buy-card {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: var(--color2);
+}
+
+.container nav i:hover .nav-card {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    border-bottom: solid thin #e1e1e1;
+}
+
+.container nav :hover .buy-card > button {
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494848;
+    cursor: pointer;
+}
+
+.container nav i:hover .buy-card > button:hover {
+    border: solid thin #494848;
+    transition: all .4s;
+}
+
+.container nav i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 3rem;
+    color: var(--color4);
+    padding: 50px;
+}
+
+.marcas{
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 3rem;
+    color: var(--color4);
+    padding: 50px;
+    margin: -50px;
+}
+
+.envios {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 1.94rem;
+    color: var(--color2);
+    padding: 22px;
+    margin: -50px;
+}
+
+.grid {
+    display: grid;
+    max-width: 1600px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,200px));
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: var(--color3);
+    border: solid thin var(--color1);
+}
+
+.items img {
+    width: 100%;
+    height: 200px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    font-size: 1.6rem;
+}
+
+.info p {
+    font-size: 1.8rem;
+    color: var(--color8);
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.precio p {
+    color: var(--color1);
+    font-size: 1.8rem;
+}
+
+.info h3,
+.info p {
+    margin-bottom: 15px;
+}
+
+.precio p:first-child {
+    text-decoration: line-through;
+}
+
+.info button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #33c3f0;
+    border: none;
+    outline: none;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.info button:hover {
+    background-color: #2da0c3;
+    transition: all .3s;
+}
+
+.bg-pink{
+    background: var(--color2);
+}
+
+.bg-rose{
+    background: var(--color1);
+    
+}
+
+.bg-rose-text{
+    background: var(--color1);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+     font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+}
+
+.text{
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    background: var(--color1);
+    font-size: 20px;
+    color: white;
+}
+
+.text-white{
+     font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+}
+
+.text-login {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+    text-decoration: none;
+    padding: 15px;
+    position: relative;
+    top: 30px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 55px;
+}
+
+.ul2{
+   display: grid;
+   grid-template-columns: auto auto auto auto auto auto;
+   grid-template-rows: 55px;
+   font-family: "Quicksand", sans-serif;
+   width: 100%;
+   background: var(--color1);
+   font-size: 20px;
+   color: white;
+}
+
+li {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+ }
+
+.tarjeta{
+        width: 30%;
+        height: 80%;
+        background-color: #f6a2bf;
+        border: 5px solid #f06e9c;
+        border-radius: 15px;
+        padding: 15px;
+        margin: auto;
+        text-align: center;
+}
+
+.cuadro-explicativo{
+    text-align: center;
+    display: flex;
+    background-color: #f06e9c;
+    width: 55%;
+    height: 30vh;
+    margin: auto;
+    padding-top: 10px;
+    top: 10px;
+}
+
+.derecha{
+    float: right;
+}
+
+.metodos{
+    display: flex;
+    padding-left: 350px;
+}
+
+/*Cuadro de inicio de sesión*/
+section {
+    position: absolute;
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+/*Cuadro de registro*/
+.registrar {
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+section .iniciar {
+    position: absolute;
+    width: 400px;
+    background: var(--color1);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px var(--color6);
+}
+
+section .iniciar .contenido {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section .iniciar .contenido h2{
+    font-size: 30px;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+section .iniciar .contenido .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 16px;
+}
+
+section .iniciar .contenido .form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+section .iniciar .contenido .form .inputBox input {
+    position: relative;
+    width: 100%;
+    background: var(--color2);
+    border: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color3);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .iniciar .contenido .form .inputBox textarea {
+    position: relative;
+    width: 100%;
+    background: var(--color2);
+    border: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color3);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .iniciar .contenido .form .inputBox i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: var(--color4);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.iniciar .contenido .form .inputBox input:focus ~ i,
+.iniciar .contenido .form .inputBox input:valid ~ i {
+    transform: translateY(-7.5px);
+    color: var(--color3);
+}
+
+.iniciar .contenido .form .inputBox textarea:focus ~ i,
+.iniciar .contenido .form .inputBox textarea:valid ~ i {
+    transform: translateY(-7.5px);
+    color: var(--color3);
+}
+
+/*Links de login*/
+.iniciar .contenido .form .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iniciar .contenido .form .links a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+/*Links de registro*/
+.iniciar .contenido .form .links2 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.iniciar .contenido .form .links2 a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+.iniciar .contenido .form .inputBox input[type="submit"]{
+    padding: 10px;
+    background: var(--color2);
+    color: var(--color3);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.iniciar .contenido .form .inputBox input[type="submit"]:hover{
+    background: var(--color5);
+}
+
+input[type="submit"]:active{
+    opacity: 0.6;
+}
+
+/* Estilos para pantallas*/
+@media screen and (min-width: 375px) and (max-width: 667px){
+    .container nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    background-color: var(--color1);
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.nav-card {
+    display: none;
+}
+
+.container nav button {
+    display: none;
+}
+
+.nav-card li {
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.container nav i:hover > .buy-card {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: var(--color2);
+}
+
+.container nav i:hover .nav-card {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    border-bottom: solid thin #e1e1e1;
+}
+
+.container nav :hover .buy-card > button {
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494848;
+    cursor: pointer;
+}
+
+.container nav i:hover .buy-card > button:hover {
+    border: solid thin #494848;
+    transition: all .4s;
+}
+
+.container nav i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 3rem;
+    color: var(--color4);
+    padding: 50px;
+}
+
+.marcas{
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 3rem;
+    color: var(--color4);
+    padding: 50px;
+    margin: -50px;
+}
+
+.envios {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 1.94rem;
+    color: var(--color2);
+    padding: 22px;
+    margin: -50px;
+}
+
+.grid {
+    display: grid;
+    max-width: 1600px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,200px));
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: var(--color3);
+    border: solid thin var(--color1);
+}
+
+.items img {
+    width: 100%;
+    height: 200px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    font-size: 1.6rem;
+}
+
+.info p {
+    font-size: 1.8rem;
+    color: var(--color8);
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.precio p {
+    color: var(--color1);
+    font-size: 1.8rem;
+}
+
+.info h3,
+.info p {
+    margin-bottom: 15px;
+}
+
+.precio p:first-child {
+    text-decoration: line-through;
+}
+
+.info button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #33c3f0;
+    border: none;
+    outline: none;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.info button:hover {
+    background-color: #2da0c3;
+    transition: all .3s;
+}
+
+.bg-pink{
+    background: var(--color2);
+}
+
+.bg-rose{
+    background: var(--color1);
+    
+}
+
+.bg-rose-text{
+    background: var(--color1);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+     font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+}
+
+.text{
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    background: var(--color1);
+    font-size: 12px;
+    color: white;
+    padding-left: 5px;
+}
+
+.text-white{
+     font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+}
+
+.text-login {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: var(--color3);
+    text-decoration: none;
+    padding: 2px;
+    position: relative;
+    top: 45px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 55px;
+}
+
+.ul2{
+   display: grid;
+   grid-template-columns: auto auto auto auto auto auto;
+   grid-template-rows: 55px;
+   font-family: "Quicksand", sans-serif;
+   width: 100%;
+   background: var(--color1);
+   font-size: 20px;
+   color: white;
+}
+
+li {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+ }
+
+.tarjeta{
+        width: 30%;
+        height: 80%;
+        background-color: #f6a2bf;
+        border: 5px solid #f06e9c;
+        border-radius: 15px;
+        padding: 15px;
+        margin: auto;
+        text-align: center;
+}
+
+.cuadro-explicativo{
+    text-align: center;
+    display: flex;
+    background-color: #f06e9c;
+    width: 55%;
+    height: 30vh;
+    margin: auto;
+    padding-top: 10px;
+    top: 10px;
+}
+
+.derecha{
+    float: right;
+}
+
+.metodos{
+    display: flex;
+    padding-left: 15px;
+    height: 145px;
+    margin-top: 10%;
+}
+
+/*Cuadro de inicio de sesión*/
+section {
+    position: absolute;
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 15px;
+}
+/*Cuadro de registro*/
+.registrar {
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+section .iniciar {
+    position: absolute;
+    width: 400px;
+    background: var(--color1);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px var(--color6);
+}
+
+section .iniciar .contenido {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section .iniciar .contenido h2{
+    font-size: 30px;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+section .iniciar .contenido .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 16px;
+}
+
+section .iniciar .contenido .form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+section .iniciar .contenido .form .inputBox input {
+    position: relative;
+    width: 100%;
+    background: var(--color2);
+    border: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color3);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .iniciar .contenido .form .inputBox textarea {
+    position: relative;
+    width: 100%;
+    background: var(--color2);
+    border: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color3);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .iniciar .contenido .form .inputBox i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: var(--color4);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.iniciar .contenido .form .inputBox input:focus ~ i,
+.iniciar .contenido .form .inputBox input:valid ~ i {
+    transform: translateY(-7.5px);
+    color: var(--color3);
+}
+
+.iniciar .contenido .form .inputBox textarea:focus ~ i,
+.iniciar .contenido .form .inputBox textarea:valid ~ i {
+    transform: translateY(-7.5px);
+    color: var(--color3);
+}
+
+/*Links de login*/
+.iniciar .contenido .form .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iniciar .contenido .form .links a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+/*Links de registro*/
+.iniciar .contenido .form .links2 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.iniciar .contenido .form .links2 a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+.iniciar .contenido .form .inputBox input[type="submit"]{
+    padding: 10px;
+    background: var(--color2);
+    color: var(--color3);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.iniciar .contenido .form .inputBox input[type="submit"]:hover{
+    background: var(--color5);
+}
+
+input[type="submit"]:active{
+    opacity: 0.6;
+}
+}
+
+/* Estilos para pantallas*/
+@media screen and (min-width: 600px) and (max-width: 995px){
+    .container nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    background-color: var(--color1);
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.nav-card {
+    display: none;
+}
+
+.container nav button {
+    display: none;
+}
+
+.nav-card li {
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.container nav i:hover > .buy-card {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: var(--color2);
+}
+
+.container nav i:hover .nav-card {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    border-bottom: solid thin #e1e1e1;
+}
+
+.container nav :hover .buy-card > button {
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494848;
+    cursor: pointer;
+}
+
+.container nav i:hover .buy-card > button:hover {
+    border: solid thin #494848;
+    transition: all .4s;
+}
+
+.container nav i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 3rem;
+    color: var(--color4);
+    padding: 50px;
+}
+
+.marcas{
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 3rem;
+    color: var(--color4);
+    padding: 50px;
+    margin: -50px;
+}
+
+.envios {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 1.94rem;
+    color: var(--color2);
+    padding: 22px;
+    margin: -50px;
+}
+
+.grid {
+    display: grid;
+    max-width: 1600px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,200px));
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: var(--color3);
+    border: solid thin var(--color1);
+}
+
+.items img {
+    width: 100%;
+    height: 200px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    font-size: 1.6rem;
+}
+
+.info p {
+    font-size: 1.8rem;
+    color: var(--color8);
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.precio p {
+    color: var(--color1);
+    font-size: 1.8rem;
+}
+
+.info h3,
+.info p {
+    margin-bottom: 15px;
+}
+
+.precio p:first-child {
+    text-decoration: line-through;
+}
+
+.info button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #33c3f0;
+    border: none;
+    outline: none;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.info button:hover {
+    background-color: #2da0c3;
+    transition: all .3s;
+}
+
+.bg-pink{
+    background: var(--color2);
+}
+
+.bg-rose{
+    background: var(--color1);
+    
+}
+
+.bg-rose-text{
+    background: var(--color1);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+     font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+}
+
+.text{
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    background: var(--color1);
+    font-size: 20px;
+    color: white;
+    padding-left: 5px;
+}
+
+.text-white{
+     font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+}
+
+.text-login {
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    color: var(--color3);
+    text-decoration: none;
+    padding: 2px;
+    position: relative;
+    top: 40px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 55px;
+}
+
+.ul2{
+   display: grid;
+   grid-template-columns: auto auto auto auto auto auto;
+   grid-template-rows: 55px;
+   font-family: "Quicksand", sans-serif;
+   width: 100%;
+   background: var(--color1);
+   font-size: 20px;
+   color: white;
+}
+
+li {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+ }
+
+.tarjeta{
+        width: 30%;
+        height: 80%;
+        background-color: #f6a2bf;
+        border: 5px solid #f06e9c;
+        border-radius: 15px;
+        padding: 15px;
+        margin: auto;
+        text-align: center;
+}
+
+.cuadro-explicativo{
+    text-align: center;
+    display: flex;
+    background-color: #f06e9c;
+    width: 55%;
+    height: 30vh;
+    margin: auto;
+    padding-top: 10px;
+    top: 10px;
+}
+
+.derecha{
+    float: right;
+}
+
+.metodos{
+    display: flex;
+    padding-left: 1px;
+    height: 250px;
+}
+
+/*Cuadro de inicio de sesión*/
+section {
+    position: absolute;
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 15px;
+}
+/*Cuadro de registro*/
+.registrar {
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+section .iniciar {
+    position: absolute;
+    width: 400px;
+    background: var(--color1);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px var(--color6);
+}
+
+section .iniciar .contenido {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section .iniciar .contenido h2{
+    font-size: 30px;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+section .iniciar .contenido .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 16px;
+}
+
+section .iniciar .contenido .form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+section .iniciar .contenido .form .inputBox input {
+    position: relative;
+    width: 100%;
+    background: var(--color2);
+    border: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color3);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .iniciar .contenido .form .inputBox textarea {
+    position: relative;
+    width: 100%;
+    background: var(--color2);
+    border: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--color3);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .iniciar .contenido .form .inputBox i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: var(--color4);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.iniciar .contenido .form .inputBox input:focus ~ i,
+.iniciar .contenido .form .inputBox input:valid ~ i {
+    transform: translateY(-7.5px);
+    color: var(--color3);
+}
+
+.iniciar .contenido .form .inputBox textarea:focus ~ i,
+.iniciar .contenido .form .inputBox textarea:valid ~ i {
+    transform: translateY(-7.5px);
+    color: var(--color3);
+}
+
+/*Links de login*/
+.iniciar .contenido .form .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iniciar .contenido .form .links a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+/*Links de registro*/
+.iniciar .contenido .form .links2 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.iniciar .contenido .form .links2 a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+.iniciar .contenido .form .inputBox input[type="submit"]{
+    padding: 10px;
+    background: var(--color2);
+    color: var(--color3);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.iniciar .contenido .form .inputBox input[type="submit"]:hover{
+    background: var(--color5);
+}
+
+input[type="submit"]:active{
+    opacity: 0.6;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px){
+    .metodos{
+        display: flex;
+        height: 319px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width:1180px){
+    .metodos{
+        display: flex;
+        height: 334px;
+    }
+}
+
+@media screen and (min-width: 996px) and (max-width:1180px){
+    .metodos{
+        display: flex;
+        padding-left: 125px;
+        height: 334px;
+    }
+}
+
+@media screen and (min-width: 1181px) and (max-width:1280px){
+    .metodos{
+        display: flex;
+        padding-left: 150px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1320px) and (max-width: 1500px) {
+    .metodos{
+        display: flex;
+        padding-left: 65px;
+        height: 500px;
+    }
+}
